@@ -1,0 +1,36 @@
+{
+  "name": "l2en-cli",
+  "version": "0.1.0",
+  "description": "cli,项目脚手架,快速搭建项目框架",
+  "main": "./main/bin/index.js",
+  "bin": {
+    "l2en-cli": "./main/bin/index.js"
+  },
+  "scripts": {
+    "build": "rm -rf build && tsc"
+  },
+  "author": "luolin3@lenovo.com",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "commander": "^9.4.1",
+    "download-git-repo": "^1.1.0",
+    "fs-extra": "^5.0.0",
+    "inquirer": "^6.2.0",
+    "ora": "^3.4.0",
+    "request": "^2.88.0",
+    "shelljs": "^0.8.1",
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/fs-extra": "^5.0.5",
+    "@types/node": "^11.15.54",
+    "tslib": "^2.4.1"
+  },
+  "keywords": [
+    "cli",
+    "项目构建",
+    "构建工具"
+  ]
+}
