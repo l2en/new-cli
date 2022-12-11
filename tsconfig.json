@@ -32,11 +32,12 @@
     ]
   },
   "include": [
+    // "node_modules",
     "bin/**/*",
     "src/**/*",
     "./typings/*.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    // "node_modules"
   ]
 }

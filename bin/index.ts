@@ -1,29 +1,36 @@
 #!/usr/bin/env node
 import init from '../src/lib/init';
 import * as program from 'commander';
-
+import * as figlet from 'figlet';
 const pkg = require('../../package.json');
 
-program
-  .version(pkg.version, '-v, --version')
+figlet(pkg.name, (_, data) => {
+  console.log(data);
+  initFn();
+});
 
 
-program
-  .command('init')
-  .description('初始化你的项目')
-  .action(init)
+const initFn = () => {
+  program
+    .version(`${pkg.version}`, '-v, --version')
 
-program.on('--help', function () {
-  console.log('')
-  console.log('  例子:')
+  program
+    .command('init')
+    .alias('i')
+    .description('初始化你的项目')
+    .action(init)
 
-  console.log('')
-  console.log('  项目初始化')
-  console.log(`    $ ${pkg.name} init`)
+  program.on('--help', function () {
+    console.log('')
+    console.log('  例子:')
 
-  console.log('')
-  console.log('')
-})
+    console.log('')
+    console.log('  项目初始化')
+    console.log(`    $ ${pkg.name} init`)
 
-program.parse(process.argv)
+    console.log('')
+    console.log('')
+  })
 
+  program.parse(process.argv);
+};
