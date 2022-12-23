@@ -11,6 +11,7 @@ export enum LogType {
   debug = 'debug',
   warn = 'warn',
   fatal = 'fatal',
+  order = 'order',
 }
 
 interface LogTypeItem {
@@ -59,6 +60,11 @@ const logTypeList: LogTypeItem[] = [
     'type': LogType.fatal,
     'color': 'bgRed',
     'icon': '×'
+  },
+  {
+    'type': LogType.order,
+    'color': 'green',
+    'icon': '$'
   }
 ];
 

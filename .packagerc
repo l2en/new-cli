@@ -1,17 +1,17 @@
 {
   "name": "l2en-cli",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "description": "cli,项目脚手架,快速搭建项目框架",
-  "main": "./build/bin/index.js",
+  "main": "./bin/index.js",
   "bin": {
-    "l2en-cli": "./build/bin/index.js"
+    "l2en-cli": "./bin/index.js"
   },
-  "scripts": {
-    "build": "rm -rf build && tsc && node scripts/injectPkg.js"
-  },
-  "author": "luolin3@lenovo.com",
+  "author": "luolin5@lenovo.com",
   "license": "ISC",
   "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/fs-extra": "^5.0.5",
+    "@types/node": "^11.15.54",
     "chalk": "^2.1.0",
     "commander": "^9.4.1",
     "download-git-repo": "^1.1.0",
@@ -22,12 +22,7 @@
     "request": "^2.88.0",
     "shelljs": "^0.8.1",
     "tslib": "^2.4.1",
-    "typescript": "^3.9.10"
-  },
-  "devDependencies": {
-    "@types/chalk": "^2.2.0",
-    "@types/fs-extra": "^5.0.5",
-    "@types/node": "^11.15.54"
+    "typescript": "^3.4.5"
   },
   "keywords": [
     "cli",
